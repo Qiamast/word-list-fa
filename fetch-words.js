@@ -1,12 +1,14 @@
 'use strict';
 var fs = require('fs');
-var got = require('got');
-var url = 'https://raw.github.com/atebits/Words/master/Words/en.txt';
+var normalize = require('persian-text').normalize;
 
-got(url, function (err, res) {
-	if (err) {
-		throw new Error(err);
-	}
+// in.txt should come from a persian book or bulk of text or something
+var input = fs.readFileSync('./in.txt').toString().replace('\n', ' ')
+input = normalize(input);
 
-	fs.writeFileSync('words.txt', res.trim());
-});
+var words = input.split(' ')
+  .filter((w, ix) => w.length > 1)
+  .sort()
+  .filter((w, ix, self) => self.indexOf(w) === ix);
+
+fs.writeFileSync('./words.txt', words.join('\n'));

@@ -1,20 +1,17 @@
 {
-  "name": "word-list",
-  "version": "1.0.1",
-  "description": "List of English words",
+  "name": "word-list-fa",
+  "version": "0.1.0",
+  "description": "List of Persian words",
   "license": "MIT",
-  "repository": "sindresorhus/word-list",
+  "repository": "mvalipour/word-list-fa",
   "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "name": "Mo Valipour",
+    "email": "valipour@gmail.com"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "prepublish": "node fetch-words.js",
-    "pretest": "node fetch-words.js",
     "test": "mocha"
   },
   "files": [
@@ -26,14 +23,16 @@
     "words",
     "word-list",
     "list",
-    "en",
-    "english",
+    "fa",
+    "persian",
+    "farsi",
     "dict",
     "dictionary"
   ],
   "devDependencies": {
     "got": "^5.1.0",
     "mocha": "*",
-    "path-exists": "^2.0.0"
+    "path-exists": "^2.0.0",
+    "persian-text": "^0.1.0"
   }
 }

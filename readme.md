@@ -1,16 +1,18 @@
-# word-list [![Build Status](https://travis-ci.org/sindresorhus/word-list.svg?branch=master)](https://travis-ci.org/sindresorhus/word-list)
+# word-list-fa [![Build Status](https://travis-ci.org/mvalipour/word-list-fa.svg?branch=master)](https://travis-ci.org/mvalipour/word-list-fa)
 
-> List of [English words](https://github.com/atebits/Words/blob/master/Words/en.txt)
+> List of some Persian words
 
-Useful if you're creating a word game or just want some words to work with.
+Useful if you're creating a word game or just want some Farsi words to work with.
 
-Used by [word-stream](https://github.com/sindresorhus/word-stream) and [random-word](https://github.com/sindresorhus/random-word).
+Used by:
+
+- [random-word-fa](https://github.com/mvalipour/random-word-fa).
 
 
 ## Install
 
 ```
-$ npm install --save word-list
+$ npm install --save word-list-fa
 ```
 
 
@@ -20,13 +22,13 @@ $ npm install --save word-list
 var fs = require('fs');
 
 // returns the path to the word list which is separated by `\n`
-var wordListPath = require('word-list');
+var wordListPath = require('word-list-fa');
 
 var wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n');
-//=> [..., 'abmhos', 'abnegate', ...]
+//=> [..., 'آبان', 'رفیق', ...]
 ```
-
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](/blob/master/license) © [Sindre Sorhus](http://sindresorhus.com)
+and [Mo Valipour](http://mvalipour.github.io)
