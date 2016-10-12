@@ -1,6 +1,6 @@
 {
   "name": "word-list-fa",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "List of Persian words",
   "license": "MIT",
   "repository": "mvalipour/word-list-fa",
@@ -12,10 +12,13 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "prepublish": "node jsonify.js",
+    "pretest": "node jsonify.js",
     "test": "mocha"
   },
   "files": [
     "index.js",
+    "words.json",
     "words.txt"
   ],
   "keywords": [
