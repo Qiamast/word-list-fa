@@ -24,7 +24,7 @@ var fs = require('fs');
 // returns the path to the word list which is separated by `\n`
 var wordListPath = require('word-list-fa');
 
-var wordArray = fs.readFileSync(wordListPath, 'utf8').split('\n');
+var wordArray = fs.readFileSync(wordListPath.path, 'utf8').split('\n');
 //=> [..., 'آبان', 'رفیق', ...]
 ```
 
